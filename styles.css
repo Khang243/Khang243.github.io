@@ -1,0 +1,68 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", sans-serif;
+}
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-link {
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #0d6efd !important;
+  transform: scale(1.1);
+}
+.ad-banner {
+  /* CSS này bị ghi đè bởi CSS nội tuyến trong base.html, nhưng vẫn giữ lại */
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white; 
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.ad-banner:hover {
+  transform: scale(1.05);
+}
+.content-box {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+/* ✅ ĐÃ THÊM CSS CHO SẢN PHẨM */
+.product-card {
+  border: none; /* Bỏ viền mặc định của card */
+  border-radius: 1rem; /* Giống .content-box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nhấc lên khi hover */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Đổ bóng rõ hơn */
+}
+
+.product-card .card-img-top {
+  height: 200px; /* Cố định chiều cao ảnh */
+  object-fit: cover; /* Đảm bảo ảnh vừa vặn, không bị méo */
+  border-radius: 1rem 1rem 0 0; /* Bo tròn góc trên của ảnh */
+}
+
+.product-card .card-body {
+  padding: 1rem; 
+}
+
+.product-card .card-title {
+  font-size: 1.1rem; /* Kích thước tiêu đề */
+  font-weight: 600;
+  /* Đảm bảo tiêu đề không quá dài */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
