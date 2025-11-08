@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Về Chúng Tôi - Fex</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* CSS nội bộ */
+    .ad-banner {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+    .search-wrapper {
+      position: relative;
+      width: 220px;
+    }
+    .search-wrapper input {
+      width: 100%;
+      padding-right: 60px;
+    }
+    .search-wrapper button {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      padding: 0 12px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .search-wrapper button:hover {
+      background-color: #0b5ed7;
+    }
+    .about-section {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="base.html">Fex</a>
+      <img src="logo.png" alt="Fex Logo" style="height: 40px; width: 40px; margin-right: 10px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item me-3">
+            <div class="search-wrapper">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+              <button id="searchButton" class="btn btn-primary">Search</button>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="base.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item">
+              <a class="nav-link position-relative" href="cart.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                      <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                  </svg>
+                  <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </a>
+          </li>
+          <li class="nav-item"><a class="nav-link text-primary" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="container my-5">
+    <div id="searchResults" class="content-box mt-4" style="display:none; background-color: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h4 class="text-primary">Search Results</h4>
+      <div id="resultsContainer" class="mt-3"></div>
+    </div>
+      
+    <div class="about-section">
+        <h1 class="text-primary mb-4">Chào mừng đến với Fex!</h1>
+        <p class="lead">
+            **Fex** là nền tảng thương mại điện tử hàng đầu, mang đến cho bạn trải nghiệm mua sắm **dễ dàng, tiện lợi và đáng tin cậy**. Chúng tôi cam kết cung cấp những sản phẩm chất lượng cao với giá cả cạnh tranh nhất.
+        </p>
+
+        <h2 class="mt-5 text-secondary">Sứ mệnh của chúng tôi</h2>
+        <p>
+            Sứ mệnh của Fex là **kết nối người tiêu dùng và nhà cung cấp** một cách hiệu quả nhất, tạo ra một hệ sinh thái mua sắm trực tuyến minh bạch và thân thiện. Chúng tôi không chỉ bán sản phẩm, mà còn bán **giá trị và sự hài lòng** cho mỗi khách hàng.
+        </p>
+
+        <h2 class="mt-5 text-secondary">Tại sao chọn Fex?</h2>
+        <ul class="list-unstyled">
+            <li class="mb-2"><strong class="text-success">✅ Sản phẩm đa dạng:</strong> Từ thời trang, điện tử đến đồ gia dụng, bạn có thể tìm thấy mọi thứ mình cần.</li>
+            <li class="mb-2"><strong class="text-success">✅ Thanh toán bảo mật:</strong> Hệ thống thanh toán được mã hóa an toàn tuyệt đối.</li>
+            <li class="mb-2"><strong class="text-success">✅ Giao hàng nhanh chóng:</strong> Hợp tác với các đối tác vận chuyển uy tín để giao hàng tận tay bạn trong thời gian ngắn nhất.</li>
+            <li class="mb-2"><strong class="text-success">✅ Hỗ trợ khách hàng tận tâm:</strong> Đội ngũ hỗ trợ luôn sẵn sàng giải đáp mọi thắc mắc của bạn 24/7.</li>
+        </ul>
+
+        <p class="mt-5 fs-5 fw-bold text-center text-primary">
+            Hãy khám phá ngay các ưu đãi hấp dẫn và bắt đầu hành trình mua sắm tuyệt vời cùng Fex!
+        </p>
+    </div>
+    </div>
+
+  <footer class="text-center py-3 bg-white border-top mt-5">
+    <small>© 2025 MyWebsite — All rights reserved.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
